@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <p id = 'Demo'></p>
+    <p id = 'add'></p>
+    <p id = 'divide' ></p>
+    <p id = 'subtract' ></p>
+</head>
+<body>
+    <script>
+        function My_function(val){
+            document.getElementById('Demo').innerHTML = val*val
+        }
+        //calling a function
+        //passing a value 
+        My_function(5)
+        function add(x,y){
+            document.getElementById('add').innerHTML = x + y
+
+        }
+       add(3,5)
+      // arrow function 
+      const divide = (a, b) => {
+  // Check for division by zero
+  if (b === 0) {
+    return "Cannot divide by zero";
+  }
+
+  // Check for non-numeric inputs
+  if (!Number.isFinite(a) || !Number.isFinite(b)) {
+    return "Invalid input: Please enter numbers only";
+  }
+
+  // Perform the division
+  const result = a / b;
+
+  // Validate the result to ensure it's not NaN
+  if (Number.isNaN(result)) {
+    return "Result is not a number (NaN)"; // Or handle it differently as needed
+  }
+
+  // Return the valid division result
+  return result;
+};
+
+// Call the function and display the result in the element with ID "divide"
+document.getElementById('divide').innerHTML = divide(100, 5);
+
+//repeat 
+const subtract = (x,y) =>{
+  
+
+    // perform the subtraction
+    const result = x - y;
+
+    // Validate the result to ensure it's not NaN
+  if (Number.isNaN(result)) {
+    return "Result is not a number (NaN)"; // Or handle it differently as needed
+  }
+
+    // Return the valid subtraction
+  return result;
+};
+document.getElementById('subtract').innerHTML = subtract(100, 5);
+    </script>
+    
+
+    
+</body>
+</html>
